@@ -11,6 +11,8 @@ volatile int16_t adcValue1=0;
 int16_t temp;
 volatile uint8_t lowByte; // Récupérer les 8 bits inférieurs
 volatile uint8_t highByte; // Récupérer les 8 bits supérieurs
+// attention, vous devez revoir la conception du filtre en fonction de la fréquence d'echantillonnage
+
 
 int16_t filterBuffer[FILTER_ORDER + 1] = {0,0,0,0,0};
 int16_t filterCoefficients[FILTER_ORDER + 1] = {8,35,53,35,8}; 
